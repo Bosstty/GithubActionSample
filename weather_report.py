@@ -32,7 +32,7 @@ def get_weather(my_city):
             for index, tr in enumerate(trs):
                 tds = tr.find_all("td")
                 # 这里倒着数，因为每个省会的td结构跟其他不一样
-                city_td = tds[-12]
+                city_td = tds[-3]
                 this_city = list(city_td.stripped_strings)[0]
                 if this_city == my_city:
 
