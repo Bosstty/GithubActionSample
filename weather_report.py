@@ -28,7 +28,7 @@ def get_weather(my_city):
         div_conMidtab = soup.find("div", class_="conMidtab")
         tables = div_conMidtab.find_all("table")
         for table in tables:
-            trs = table.find_all("tr")[0:]
+            trs = table.find_all("tr")[1:]
             for index, tr in enumerate(trs):
                 tds = tr.find_all("td")
                 # 这里倒着数，因为每个省会的td结构跟其他不一样
