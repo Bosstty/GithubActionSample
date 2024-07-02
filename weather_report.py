@@ -28,11 +28,11 @@ def get_weather(my_city):
         div_conMidtab = soup.find("div", class_="conMidtab")
         tables = div_conMidtab.find_all("table")
         for table in tables:
-            trs = table.find_all("tr")[1:]
+            trs = table.find_all("tr")[2:]
             for index, tr in enumerate(trs):
                 tds = tr.find_all("td")
                 # 这里倒着数，因为每个省会的td结构跟其他不一样
-                city_td = tds[-3]
+                city_td = tds[-8]
                 this_city = list(city_td.stripped_strings)[0]
                 if this_city == my_city:
 
